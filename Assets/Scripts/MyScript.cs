@@ -64,8 +64,29 @@ public class MyScript : MonoBehaviour
         MyMeth();
     }
 
+    public void IncreaseMyFloat()
+    {
+        /*
+        if true
+        {Do these things}
+
+        if else
+        {Do these things}
+        */
+        if (Input.GetKeyDown("space")) //using a `.` lets you access all the classes inside the func
+        {
+            MyFloat += 2f; //need to use an f after number to tell its a float
+            // MyInt += 5;
+        }
+
+        // MyInt += 5; << if the code were out here it would run regardless if true or not (always runs)
+
+    }
+
+
     private void Update()
     {
         ScoreText.text = " Score: " + MyInt.ToString();
+        IncreaseMyFloat();
     }
 }
